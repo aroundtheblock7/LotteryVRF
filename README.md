@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# LotteryVRF
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+### In this project we create a lottery using Chainlinks Verifiably Random Feature that allows users to receive a true random number. We also use Chain Link Keepers to fully automate the lottery so that after enough users have entered (1 in this case), enough time interval has passed, and there is funds in the lottery contract, the Keepers will automatically execute and upkeep thererby choosing a winner to the lottery and paying out the winner. 
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+### In the photos below we can see.. screen shots of the contract deployed successfuly via hardhat to rinkeby network, the VRF Consumer Base site with the deployed contract address, the Keepers site with a history of a funded account and a couple "upkeeps", as well as Transaction confirmations on etherscan that shows enterLottery executed. We can also see the internal transactions that are used by the VRFCoordinator and the Keepers. This contract can also be run locally on hardhat with via the Mock contract set up. Deploy scripts and Helper-Hardhat--Config.js file were both used to fully automate the deployment process. 
